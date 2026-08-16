@@ -1,25 +1,8 @@
-
 services:
-  db:
-    image: postgres:15-alpine
-    environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: userdb
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
   api:
     build: .
     ports:
       - "3000:3000"
     environment:
-      - DB_DSN=postgres://myuser:mypassword@db:5432/userdb?sslmode=disable
+      - DB_DSN=postgres://postgres:4140@host.docker.internal:5433/userdb?sslmode=disable
       - PORT=3000
-    depends_on:
-      - db
-
-volumes:
-  postgres_data:
