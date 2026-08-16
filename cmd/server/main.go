@@ -2,7 +2,6 @@ package main
 
 import (
 	"database/sql"
-	"log"
 
 	"github.com/Harsh-karn/Go-Backend-Development-Task/config"
 	"github.com/Harsh-karn/Go-Backend-Development-Task/internal/handler"
