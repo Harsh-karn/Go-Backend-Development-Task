@@ -1,4 +1,4 @@
-# Go Backend Development Task
+# User Management API
 
 A RESTful API built with Go for managing users. The API stores user data (name, dob) in a PostgreSQL database and dynamically calculates their age when requested.
 
